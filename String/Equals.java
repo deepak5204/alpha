@@ -1,6 +1,6 @@
 package String;
 
-public class Compare {
+public class Equals {
     public static void main(String[] args){
         String str = "hello"; // String literal
         String str2 = "hello"; // String literal
