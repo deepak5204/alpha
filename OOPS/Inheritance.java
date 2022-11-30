@@ -6,6 +6,9 @@ public class Inheritance {
         Dog tommy = new Dog();
         tommy.legs(4);
 
+        Bird b = new Bird();
+        b.fly();
+
 
         // Fish f1 = new Fish();
         // f1.eat();
@@ -29,6 +32,12 @@ class Animal{
 class Mammal extends Animal{
     void legs(int legs){
         System.out.println(legs);
+    }
+}
+
+class Bird extends Mammal{
+    void fly(){
+        System.out.println("flying");
     }
 }
 
