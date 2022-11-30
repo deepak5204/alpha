@@ -11,7 +11,7 @@ public class GettersAndSetters {
 
 class BankAccount{
     String username;
-   private String Password;
+   private String Password; // is only accessible inside class
 
    //getters - return the value
    String getPassowrd(){
