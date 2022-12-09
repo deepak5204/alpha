@@ -1,6 +1,22 @@
 package Recursion;
 
 public class CalculateXpowerN {
+
+    public static int optimizedPower(int x, int n){
+        if(n == 0){
+            return 1;
+        }
+
+        int halfPower = optimizedPower(x, n/2);
+        int halfPowerSquare = halfPower * halfPower;
+
+        //n is odd
+        if(n % 2 == 1){
+            halfPowerSquare = x * halfPowerSquare;
+        }
+            return halfPowerSquare;
+    }
+
     public static int calcPower(int x, int n){
         if(n == 0){
             return 1;
@@ -10,7 +26,8 @@ public class CalculateXpowerN {
         return x * powOfNm1;
     }
     public static void main(String[] args) {
-        int res = calcPower(2,5);
+        // int res= calcPower(2,5);
+        int res = optimizedPower(2, 5);
         System.out.println(res);
     }
 }
