@@ -1,6 +1,6 @@
 package Recursion;
 
-public class countSubstring {
+public class CountSubstring {
 
     public static int cSubstring(String str, int i, int j, int len){
         if(len == 1){
