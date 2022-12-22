@@ -28,22 +28,46 @@ public class ChessBoard {
 
     static int count = 0;
 
-    public static void nQueens(char[][] board, int row){
+    ////print all possible ways and count ways 
+    // public static void nQueens(char[][] board, int row){
+    //     //base case
+    //     if(row == board.length){
+    //         count++;
+    //         // printBoard(board);
+    //         return;
+    //     }
+ 
+    //     //column loop
+    //     for(int j = 0; j < board.length; j++){
+    //        if(isSafe(board, row, j)){
+    //             board[row][j] = 'Q';
+    //             nQueens(board, row+1); //function call
+    //             board[row][j] = 'x'; //backtracking step
+    //        }
+    //     }
+    // }
+
+
+    ////nQueen for only one solution
+    public static boolean nQueens(char[][] board, int row){
         //base case
-        if(row == board.length){
+        if(row == board.length){           
             count++;
             // printBoard(board);
-            return;
+            return true;
         }
- 
+     
         //column loop
         for(int j = 0; j < board.length; j++){
            if(isSafe(board, row, j)){
                 board[row][j] = 'Q';
-                nQueens(board, row+1); //function call
-                board[row][j] = 'x'; //backtracking step
-           }
+                if(nQueens(board, row+1)){ //function call
+                    return true;
+                } 
+                board[row][j] = 'x';
+           } 
         }
+        return false;
     }
 
     //print board
@@ -67,8 +91,14 @@ public class ChessBoard {
             }
         }
 
-        nQueens(board, 0);
+        // nQueens(board, 0);
+        // System.out.println("Total no of ways to solve n queens = "+ count);
 
-        System.out.println("Total no of ways to solve n queens = "+ count);
+        if(nQueens(board, 0)){
+            System.out.println("Solution is possible");
+            printBoard(board);
+        } else {
+            System.out.println("solution is not possible");
+        }
     }
 }
