@@ -26,10 +26,13 @@ public class ChessBoard {
         return true;
     }
 
+    static int count = 0;
+
     public static void nQueens(char[][] board, int row){
         //base case
         if(row == board.length){
-            printBoard(board);
+            count++;
+            // printBoard(board);
             return;
         }
  
@@ -65,5 +68,7 @@ public class ChessBoard {
         }
 
         nQueens(board, 0);
+
+        System.out.println("Total no of ways to solve n queens = "+ count);
     }
 }
