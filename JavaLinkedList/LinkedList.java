@@ -208,7 +208,7 @@ public class LinkedList {
 
 
         //find mid using slow fast approach
-        public Node findMid(){
+        public Node findMid(Node head){
             Node slow = head;
             Node fast = head;
 
