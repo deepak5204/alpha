@@ -164,7 +164,7 @@ public class LinkedList {
 
 
         //Reverse a Linked List
-        public void reverse(){
+        public void reverse(){ //O(n)
             Node prev = null;
             Node curr = tail = head;
             Node next;
@@ -177,6 +177,33 @@ public class LinkedList {
             }
 
             head = prev;
+        }
+
+
+        // Find and remove Nth node from last
+        public void deleteNthNodeFromLast(int n){  //O(n)
+            //calculate size
+            int sz = 0;
+            Node temp = head;
+            while(temp != null){
+                temp = temp.next;
+                sz++;
+            }
+
+            if(size == n){  //remove First node
+                head = tail = head.next;
+                return;
+            }
+
+            int i = 1;
+            int idxToFind = sz - n;
+            Node prev = head;
+            while(i < idxToFind){
+                prev = prev.next;
+                i++;
+            }
+            prev.next = prev.next.next;
+            return;
         }
 
 
@@ -208,8 +235,13 @@ public class LinkedList {
         // System.out.println(ll.recursiveSearch(20));
 
 
+        // ll.print();
+        // ll.reverse();
+        // ll.print();
+
+
         ll.print();
-        ll.reverse();
+        ll.deleteNthNodeFromLast(3);
         ll.print();
 
     }
