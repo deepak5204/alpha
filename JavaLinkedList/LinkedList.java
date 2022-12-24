@@ -122,7 +122,6 @@ public class LinkedList {
     }
 
     //Search in linked list using iterative approach
-
     public int iterativeSearch(int key){
         Node temp = head;
         int i = 0;
@@ -137,6 +136,31 @@ public class LinkedList {
 
         return -1; // Key not found
     }
+
+
+        public int helper(Node head, int key){
+            if(head == null){
+                return -1;
+            }
+            
+            if(head.data == key){
+                return 0;
+            }
+
+            int idx = helper(head.next, key);
+            if(idx == -1){
+                return -1;
+            }
+            else{
+                idx += 1;
+            }
+            return idx;
+        }
+
+        //Search in linked list using Recursive approach
+        public int recursiveSearch(int key){
+            return helper(head, key);
+        }
 
 
     public static Node head;
@@ -160,8 +184,13 @@ public class LinkedList {
         // ll.removeLast();
         // ll.print();
 
-        System.out.println(ll.iterativeSearch(3));
-        System.out.println(ll.iterativeSearch(20));
+        // System.out.println(ll.iterativeSearch(3));
+        // System.out.println(ll.iterativeSearch(20));
+
+        System.out.println(ll.recursiveSearch(3));
+        System.out.println(ll.recursiveSearch(20));
+
+
 
     }
 }
