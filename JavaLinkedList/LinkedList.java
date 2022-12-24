@@ -163,6 +163,23 @@ public class LinkedList {
         }
 
 
+        //Reverse a Linked List
+        public void reverse(){
+            Node prev = null;
+            Node curr = tail = head;
+            Node next;
+
+            while(curr != null){
+                next = curr.next;
+                curr.next = prev;
+                prev = curr;
+                curr = next;
+            }
+
+            head = prev;
+        }
+
+
     public static Node head;
     public static Node tail;
     public static int size;
@@ -187,10 +204,13 @@ public class LinkedList {
         // System.out.println(ll.iterativeSearch(3));
         // System.out.println(ll.iterativeSearch(20));
 
-        System.out.println(ll.recursiveSearch(3));
-        System.out.println(ll.recursiveSearch(20));
+        // System.out.println(ll.recursiveSearch(3));
+        // System.out.println(ll.recursiveSearch(20));
 
 
+        ll.print();
+        ll.reverse();
+        ll.print();
 
     }
 }
