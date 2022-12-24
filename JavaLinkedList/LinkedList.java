@@ -76,7 +76,25 @@ public class LinkedList {
         //Make before break
         newNode.next = temp.next;
         temp.next = newNode;
+    }
 
+
+    //Remove from first
+    public int removeFirst(){
+        if(size == 0){
+            System.out.println("LL is empty");
+            return Integer.MIN_VALUE;
+        } else if(size == 1){
+            int val = head.data;
+            head = tail = null;
+            size = 0;
+            return val;
+        }
+
+        int val = head.data;
+        head = head.next;
+        size--;
+        return val;
     }
 
 
@@ -91,8 +109,12 @@ public class LinkedList {
         ll.addLast(5);
         ll.addLast(6);
         ll.addInMiddle(2, 3);
+        // 1->2->3->4->5->6
+        ll.print(); 
+        // System.out.println(size);
+
+        ll.removeFirst();
         ll.print();
-        System.out.println(size);
 
     }
 }
