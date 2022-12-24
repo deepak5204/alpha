@@ -207,6 +207,19 @@ public class LinkedList {
         }
 
 
+        //find mid using slow fast approach
+        public Node findMid(){
+            Node slow = head;
+            Node fast = head;
+
+            while(fast != null && fast.next != null){
+                slow = slow.next; // +1
+                fast = fast.next.next; // +2
+            }
+            return slow;
+        }
+
+
     public static Node head;
     public static Node tail;
     public static int size;
