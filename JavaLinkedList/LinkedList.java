@@ -119,7 +119,23 @@ public class LinkedList {
         prev.next = null;
         tail = prev;
         return val;
+    }
 
+    //Search in linked list using iterative approach
+
+    public int iterativeSearch(int key){
+        Node temp = head;
+        int i = 0;
+
+        while(temp != null){
+            if(temp.data == key){ //key found
+                return i;
+            }
+            temp = temp.next;
+            i++;
+        }
+
+        return -1; // Key not found
     }
 
 
@@ -135,14 +151,17 @@ public class LinkedList {
         ll.addLast(6);
         ll.addInMiddle(2, 3);
         // 1->2->3->4->5->6
-        ll.print(); 
-        // System.out.println(size);
+        // ll.print(); 
+        // // System.out.println(size);
 
-        ll.removeFirst();
-        ll.print();
+        // ll.removeFirst();
+        // ll.print();
 
-        ll.removeLast();
-        ll.print();
+        // ll.removeLast();
+        // ll.print();
+
+        System.out.println(ll.iterativeSearch(3));
+        System.out.println(ll.iterativeSearch(20));
 
     }
 }
