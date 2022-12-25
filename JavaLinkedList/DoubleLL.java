@@ -98,6 +98,24 @@ public class DoubleLL {
     }
 
 
+    //Reverse DoublyLL
+    public void reverseDoubleLL(){
+        Node curr = head;
+        Node prev = null;
+        Node next;
+
+        while(curr != null){
+            next = curr.next;
+            curr.next = prev;
+            curr.prev = next;
+
+             prev = curr;
+             curr = next;
+        }
+        head = prev;
+    }
+
+
     public static Node head;
     public static Node tail;
     public static int size;
@@ -109,18 +127,22 @@ public class DoubleLL {
         dll.addFirst(1);
         dll.addLast(4);
 
-        dll.print();
-        System.out.println();
-        System.out.println(size);
+        // dll.print();
+        // System.out.println();
+        // System.out.println(size);
 
-        dll.removeFist();
-        dll.print();
-        System.out.println();
-        System.out.println(size);
+        // dll.removeFist();
+        // dll.print();
+        // System.out.println();
+        // System.out.println(size);
 
-        dll.removeLast();
+        // dll.removeLast();
+        // dll.print();
+      
         dll.print();
-        
+        dll.reverseDoubleLL();
+        System.out.println();
+        dll.print();
 
     }
 }
