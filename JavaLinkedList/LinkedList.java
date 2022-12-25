@@ -220,6 +220,41 @@ public class LinkedList {
         }
 
 
+        //check palindrome 
+        public boolean checkPalindrome(){
+            if(head == null || head.next == null){
+                return true;
+            }
+
+            Node mid = findMid(head);
+
+            //reverse right half
+            Node prev = null;
+            Node curr = mid;
+            Node next;
+
+            while(curr != null){
+                next = curr.next;
+                curr.next = prev;
+                prev = curr;
+                curr = next;
+            }
+
+            Node left = head;
+            Node right = prev;
+
+            //check left half or right half equal
+            while(right != null){
+                if(left.data != right.data){
+                    return false;
+                }
+                left = left.next;
+                right = right.next;
+            }
+            return true;
+        }
+
+
     public static Node head;
     public static Node tail;
     public static int size;
@@ -227,10 +262,10 @@ public class LinkedList {
         LinkedList ll = new LinkedList();
         ll.addFirst(2);
         ll.addFirst(1);
-        ll.addLast(4);
-        ll.addLast(5);
-        ll.addLast(6);
-        ll.addInMiddle(2, 3);
+        // ll.addLast(4);
+        ll.addLast(2);
+        ll.addLast(1);
+        // ll.addInMiddle(2, 3);
         // 1->2->3->4->5->6
         // ll.print(); 
         // // System.out.println(size);
@@ -253,9 +288,11 @@ public class LinkedList {
         // ll.print();
 
 
+        // ll.print();
+        // ll.deleteNthNodeFromLast(3);
         ll.print();
-        ll.deleteNthNodeFromLast(3);
-        ll.print();
+
+        System.out.println(ll.checkPalindrome());
 
     }
 }
