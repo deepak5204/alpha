@@ -19,7 +19,10 @@ public class SinglyCircularLL {
             head = tail = newNode;
             return;
         }
+
+        // step2 - newNode next = head
         newNode.next = head;
+        // step3- head = newNode
         head = newNode;
         tail.next = head;
     }
@@ -33,6 +36,22 @@ public class SinglyCircularLL {
         System.out.print(temp.data);
     }
 
+    //add Last
+    public void addLast(int data){
+        //step 1 create Node
+        Node newNode = new Node(data);
+        if(head == null){
+            head = tail = newNode;
+            return;
+        }
+        //step2- tail next = newNode
+        tail.next = newNode;
+
+        //step3- tail = newNode
+        tail = newNode;
+        tail.next = head;
+    }
+
     public static Node head;
     public static Node tail;
     public static int size;
@@ -41,10 +60,10 @@ public class SinglyCircularLL {
         SCLL.addFirst(3);
         SCLL.addFirst(2);
         SCLL.addFirst(1);
+        SCLL.addLast(4);
+        SCLL.addLast(5);
 
         SCLL.printCLL();
-        System.out.println(head);
-        System.out.println(tail.next);
-
+       
     }
 }
