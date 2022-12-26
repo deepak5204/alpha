@@ -11,7 +11,7 @@ public class StackUsingArrayList {
         }
 
         //push
-        public static void push(int data){
+        public void push(int data){
             list.add(data);
         }
 
@@ -35,14 +35,15 @@ public class StackUsingArrayList {
 
 
     public static void main(String[] args){
+
         Stack s = new Stack();
         s.push(1);
         s.push(2);
         s.push(3);
 
-        while(! s.isEmpty()){
-            System.out.println(s.peek());
-            s.pop();
+        while(! Stack.isEmpty()){
+            System.out.println(Stack.peek());
+            Stack.pop();
         }
         
     }
