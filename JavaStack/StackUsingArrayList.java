@@ -1,10 +1,6 @@
 package JavaStack;
 
 import java.util.ArrayList;
-import java.util.List;
-
-import javax.swing.Popup;
-
 public class StackUsingArrayList {
     public static class Stack{
         static ArrayList<Integer> list = new ArrayList<>();
