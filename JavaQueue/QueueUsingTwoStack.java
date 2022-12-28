@@ -12,7 +12,7 @@ public class QueueUsingTwoStack {
         }
 
         //add
-        public void add(int data){
+        public void add(int data){  //O(n)
             while(!s1.isEmpty()){
                 s2.push(s1.pop());
             }
@@ -25,7 +25,7 @@ public class QueueUsingTwoStack {
         }
 
         //remove
-        public int remove(){
+        public int remove(){  //O(1)
             if(s1.isEmpty()){
                 return -1;
             }
@@ -33,7 +33,7 @@ public class QueueUsingTwoStack {
         }
 
         //peek
-        public int peek(){
+        public int peek(){  //O(1)
             if(s1.isEmpty()){
                 return -1;
             }
