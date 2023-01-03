@@ -42,6 +42,18 @@ public class BinaryTreeB {
             preorder(root.right); //function call
         }
 
+
+        //Inorder Traversal
+        public void inorder(Node root){
+            //base case
+            if(root == null){
+                return;
+            }
+            inorder(root.left); //function call
+            System.out.print(root.data+" "); // work
+            inorder(root.right); //function call
+        }
+
     }
     public static void main(String[] args){
         int[] nodes = {1, 2, 4, -1, -1, 5, -1, -1, 3, -1, 6, -1, -1};
@@ -49,7 +61,8 @@ public class BinaryTreeB {
         Node root = tree.buildTree(nodes);
         // System.out.println(root.data);
 
-        tree.preorder(root);
+        // tree.preorder(root);
+        tree.inorder(root);
 
 
     }
