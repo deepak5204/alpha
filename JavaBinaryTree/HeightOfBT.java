@@ -23,24 +23,6 @@ public class HeightOfBT {
         int lh = calcHeight(root.left);
         int rh= calcHeight(root.right);
         return Math.max(lh, rh) + 1;
-        // Queue<Node> q = new LinkedList<>();
-        // q.add(root);
-        // q.add(null);
-
-        // while(!q.isEmpty()){
-        //     Node currNode = q.remove();
-        //     if(currNode != null){
-        //         System.out.print(currNode.data+" ");
-
-        //         if(q.isEmpty()){
-        //             break;
-        //         } else{
-        //             q.add(null);
-        //         }
-        //     } else{
-
-        //     }
-        // }
     }
 
         public static void main(String[] args){
