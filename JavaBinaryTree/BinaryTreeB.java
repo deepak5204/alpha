@@ -109,6 +109,18 @@ public class BinaryTreeB {
             int rh = CalcHeight(root.right);
             return Math.max(lh, rh) + 1;
         }
+
+
+        //Count Nodes 
+        public int countNodes(Node root){
+            if(root == null){
+                return 0;
+            }
+
+            int leftcount = countNodes(root.left);
+            int rightCount = countNodes(root.right);
+            return leftcount + rightCount + 1;
+        }
     }
     public static void main(String[] args){
         int[] nodes = {1, 2, 4, -1, -1, 5, -1, -1, 3, -1, 6, -1, -1};
@@ -120,8 +132,10 @@ public class BinaryTreeB {
         // tree.inorder(root);
         // tree.postorder(root);
         // tree.levelorder(root);
-        int ht = tree.CalcHeight(root);
-        System.out.println(ht);
+        // int ht = tree.CalcHeight(root);
+        // System.out.println(ht);
+        System.out.println("Nodes = "+tree.countNodes(root));
+
 
 
 
