@@ -121,6 +121,16 @@ public class BinaryTreeB {
             int rightCount = countNodes(root.right);
             return leftcount + rightCount + 1;
         }
+
+        // calculate sum of nodes
+        public int sumOfNodes(Node root){
+            if(root == null){
+                return 0;
+            }
+            int lsum = sumOfNodes(root.left);
+            int rsum = sumOfNodes(root.right);
+            return lsum + rsum + root.data;
+        } 
     }
     public static void main(String[] args){
         int[] nodes = {1, 2, 4, -1, -1, 5, -1, -1, 3, -1, 6, -1, -1};
@@ -134,8 +144,9 @@ public class BinaryTreeB {
         // tree.levelorder(root);
         // int ht = tree.CalcHeight(root);
         // System.out.println(ht);
-        System.out.println("Nodes = "+tree.countNodes(root));
-
+        // System.out.println("Nodes = "+tree.countNodes(root));
+        int sum = tree.sumOfNodes(root);
+        System.out.println(sum);
 
 
 
