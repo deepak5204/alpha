@@ -40,6 +40,30 @@ public class CalcDiameter {
         return Math.max(selfDiam, Math.max(ld, rd));
     }
 
+    //information class
+    static class Info{
+        int diam;
+        int ht;
+
+        Info(int diam, int ht){
+            this.diam = diam;
+            this.ht = ht;
+        }
+    }
+    //2nd approach - calculate diameter
+    public static Info diameter2(Node root){ // O(n)
+        //base case
+        if(root == null){
+            return new Info(0,0);
+        }
+        Info  leftInfo = diameter2(root.left);
+        Info rightInfo = diameter2(root.right);
+
+        int diam = Math.max(Math.max(leftInfo.diam, rightInfo.diam), leftInfo.ht + rightInfo.ht + 1);
+        int ht = Math.max(leftInfo.ht, rightInfo.ht) + 1;
+        return new Info(diam, ht);
+    }
+
     public static void main(String[] args){
 /*
             1
@@ -65,5 +89,10 @@ public class CalcDiameter {
 
         int d = diameter(root);
         System.out.println("Diameter = "+ d);
+
+        Info information = diameter2(root);
+        System.out.println(information.diam);
+        System.out.println(information.ht);
+        
     }
 }
