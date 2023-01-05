@@ -96,7 +96,18 @@ public class BinaryTreeB {
                     }
                 }
             }
+        }
 
+
+        //Height of Tree
+        public int CalcHeight(Node root){
+            if(root == null){
+                return 0;
+            }
+
+            int lh = CalcHeight(root.left);
+            int rh = CalcHeight(root.right);
+            return Math.max(lh, rh) + 1;
         }
     }
     public static void main(String[] args){
@@ -108,7 +119,10 @@ public class BinaryTreeB {
         // tree.preorder(root);
         // tree.inorder(root);
         // tree.postorder(root);
-        tree.levelorder(root);
+        // tree.levelorder(root);
+        int ht = tree.CalcHeight(root);
+        System.out.println(ht);
+
 
 
     }
