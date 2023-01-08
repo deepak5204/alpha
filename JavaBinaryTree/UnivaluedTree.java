@@ -36,11 +36,12 @@ public class UnivaluedTree {
         Node root = new Node(2);
         root.left = new Node(2);
         root.right = new Node(2);
-        root.left.left = new Node(5);
+        root.left.left = new Node(2);
         root.left.right = new Node(2);
 
         int val = root.data;
-        System.out.println(isUnivalued(root, val));
+        boolean res = isUnivalued(root, val);
+        System.out.println(res == true ? "YES" : "NO");
 
     }
 }
