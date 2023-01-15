@@ -3,7 +3,7 @@ package JavaHeaps;
 public class HeapSort {
 
     //heapify for maxheap
-    public static void heapify(int[] arr, int i, int size){
+    public static void heapify(int[] arr, int i, int size){   // O(nlogn)
         int left = 2*i + 1;
         int right = 2*i + 2;
         int maxIndex = i;
@@ -27,7 +27,7 @@ public class HeapSort {
 
     }
 
-    public static void heapSort(int [] arr){
+    public static void heapSort(int [] arr){  // O(nlogn)
         //step1 - build maxheap
         int n = arr.length;
         for(int i = n/2; i >= 0; i--){
