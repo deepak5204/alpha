@@ -23,7 +23,7 @@ public class HashMapImplementation {
         private LinkedList<Node> buckets[];  //create a LinkedList array for bucket   // N = bucket.length;
 
 
-        // @SuppressWarnings("unchacked")
+        @SuppressWarnings("unchecked")
         public Implement() {
             this.N = 4;
             this.buckets = new LinkedList[4];
@@ -54,6 +54,7 @@ public class HashMapImplementation {
             return -1;
         } 
 
+        @SuppressWarnings("unchecked")
         //Rehash function
         public void rehash(){
             LinkedList<Node> oldBucket[] = buckets;
