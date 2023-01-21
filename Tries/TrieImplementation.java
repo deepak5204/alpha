@@ -27,7 +27,18 @@ public class TrieImplementation {
         curr.eow = true;
     }
 
-
+      //search 
+      public static boolean search(String key){
+        Node curr = root;
+        for(int level = 0; level < key.length(); level++){
+            int idx = key.charAt(level) - 'a';
+            if(curr.children[idx] == null){
+                return false;
+            }
+            curr = curr.children[idx];
+        }
+        return curr.eow == true;
+    }
   
 
     
@@ -37,5 +48,8 @@ public class TrieImplementation {
         for(int i = 0; i < words.length; i++){
             insert(words[i]);
         }
+
+        System.out.println(search("there"));
+        System.out.println(search("thore"));
     }
 }
