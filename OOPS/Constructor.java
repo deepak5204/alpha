@@ -37,8 +37,8 @@ class Student{
         this.name = name;
     }
 
-        // create parametrized constructor
-        Student(int rollno){
-            this.rollno = rollno;
-        }
+    // create parametrized constructor
+    Student(int rollno){
+        this.rollno = rollno;
+    }
 }
