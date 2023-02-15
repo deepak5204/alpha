@@ -25,7 +25,7 @@ public class TopologicalSorting_BFS{
         graph[4].add(new Edge(4, 0));
         graph[4].add(new Edge(4, 1));
 
-        graph[5].add(new Edge(4, 0));
+        graph[5].add(new Edge(5, 0));
         graph[5].add(new Edge(5, 2));
     }
 
@@ -71,5 +71,8 @@ public class TopologicalSorting_BFS{
     public static void main(String[] args){
         int V = 6;
         ArrayList<Edge>[] graph = new ArrayList[V];
+        createGraph(graph);
+        topSort(graph);
+
     }
 }
