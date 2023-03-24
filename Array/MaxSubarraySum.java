@@ -44,14 +44,19 @@ public class MaxSubarraySum {
     public static void maxsubarraySum2(int[] arr) {
         int largestSubarraySum = Integer.MIN_VALUE;
         int[] prefixArr = new int[arr.length];
+
+        //calculate prefix array
         prefixArr[0] = arr[0];
         for (int i = 1; i < prefixArr.length; i++) {
             prefixArr[i] = prefixArr[i - 1] + arr[i];
         }
+
         for (int i = 0; i < arr.length; i++) {
+            int start = i;
             int currSum = 0;
             for (int j = i; j < arr.length; j++) {
-                currSum = i == 0 ? prefixArr[i] : prefixArr[j] - prefixArr[i - 1];
+                int end = j;
+                currSum = i == 0 ? prefixArr[start] : prefixArr[end] - prefixArr[start - 1];
             }
             if (largestSubarraySum < currSum) {
                 largestSubarraySum = currSum;
@@ -64,11 +69,14 @@ public class MaxSubarraySum {
     public static void maxsubarraySum(int[] arr) {
         int largestSubarraySum = Integer.MIN_VALUE;
         for (int i = 0; i < arr.length; i++) {
+            int start = i;
             for (int j = i; j < arr.length; j++) {
                 int currSum = 0;
-                for (int k = i; k <= j; k++) {
+                int end = j;
+                for (int k = start; k <= end; k++) {
                     currSum += arr[k];
                 }
+                System.out.print(currSum+" ");
                 if (currSum > largestSubarraySum) {
                     largestSubarraySum = currSum;
                 }
@@ -78,9 +86,9 @@ public class MaxSubarraySum {
     }
 
     public static void main(String[] args) {
-        int arr[] = { -11, -2, -1 };
-        // maxsubarraySum(arr);
-        maxsubarraySum2(arr);
+        int arr[] = { 1, 2, 3, 4 };
+        maxsubarraySum(arr);
+        // maxsubarraySum2(arr);
         // kadanes(arr);
     }
 }
