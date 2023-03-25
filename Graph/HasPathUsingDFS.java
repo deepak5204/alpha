@@ -49,7 +49,7 @@ public class HasPathUsingDFS {
     }
 
     //check has path 
-    public static boolean hasPath(ArrayList<Edge>[] graph, int src, int dest, boolean[] visit){
+    public static boolean hasPath(ArrayList<Edge>[] graph, int src, int dest, boolean[] visit){ //TC- O(V + E)
         if(src == dest){
             return true;
         }
