@@ -51,7 +51,7 @@ public class GraphTraversalBFS {
 
 
     //BFS 
-    public static void bfs(ArrayList<Edge>[] graph){
+    public static void bfs(ArrayList<Edge>[] graph){  // TC- (v + E)
         Queue<Integer> q = new LinkedList<>();
         boolean[] vis = new boolean[graph.length];
         q.add(0); //source
