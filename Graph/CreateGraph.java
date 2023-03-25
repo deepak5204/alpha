@@ -1,6 +1,7 @@
 package Graph;
 import java.util.*;
-public class CreateGraph {static class Edge{
+public class CreateGraph {
+    static class Edge{
     int src;
     int dest;
     int wt;
@@ -29,6 +30,7 @@ public class CreateGraph {static class Edge{
 
          int v = 5; // number of vertices in graph
          //int arr[] = new int[v];
+        
          ArrayList<Edge>[] graph = new ArrayList[v]; // Null -> empty ArrayList
 
          for(int i = 0; i < v; i++){
@@ -57,6 +59,19 @@ public class CreateGraph {static class Edge{
         
         //  vertex 4
         graph[4].add(new Edge(4, 2, 2));
+
+
+        //PRINT COMPLETE GRAPH
+        for(int i = 0; i < v; i++){
+            System.out.print(graph[i].get(0).src+" -> ");
+            for(int j = 0; j < graph[i].size(); j++){
+                Edge e = graph[i].get(j);
+                System.out.print(e.dest+" ");
+            }
+            System.out.println();
+        } 
+
+        System.out.println();
 
 
         //print 2's neighbours 
