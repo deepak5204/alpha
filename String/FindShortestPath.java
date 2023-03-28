@@ -17,6 +17,11 @@ public class FindShortestPath {
             }
         }
 
+        /*
+         Shortest path = displacement
+        sqrt((x2-x1)^2 + (y2-y1)^2)
+         */
+
         //calculate sqyare of (x2 - x1)
         int x2 = x * x;
         //calculate sqyare of (y2 - y1)
