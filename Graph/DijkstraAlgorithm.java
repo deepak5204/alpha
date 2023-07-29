@@ -46,6 +46,8 @@ public class DijkstraAlgorithm {
         }
     }
 
+    //shortest path from sourse to all vertices - not guarantee in negative edges,
+    //it perfectly wor
     public static void dijkstra(ArrayList<Edge>[] graph, int src){
         int [] dist = new int[graph.length];
         for(int i = 0; i < graph.length; i++){
