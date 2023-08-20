@@ -23,7 +23,7 @@ public class ClimbingStairs {
         if(n < 0) {
             return 0;
         }
-        if(ways[n] != 0){
+        if(ways[n] != -1){
             return ways[n];
         }
         ways[n] = climbStairsWays2(n - 1, ways) + climbStairsWays2(n - 2, ways);
@@ -48,10 +48,12 @@ public class ClimbingStairs {
     public static void main(String[] args){
         int n = 6;
         System.out.println(climbStairsWays(n));
+        System.out.println();
 
         int ways[] = new int[n + 1]; // 0 0 0 0 0.....
         Arrays.fill(ways, -1); // -1 -1 -1 -1....
         System.out.print(climbStairsWays2(n, ways));
+        System.out.println();
 
         System.out.println(climbStairsWaysTab(n));
 
