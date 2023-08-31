@@ -38,7 +38,7 @@ public static int LCS(String str1, int n, String str2, int m, int[][] dp){
 }
     public static void main(String[] args){
         String str1 = "abcde";
-        String str2 = "acg";
+        String str2 = "acge";
         int n = str1.length();
         int m = str2.length();
 
