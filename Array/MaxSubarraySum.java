@@ -56,7 +56,7 @@ public class MaxSubarraySum {
             int currSum = 0;
             for (int j = i; j < arr.length; j++) {
                 int end = j;
-                currSum = i == 0 ? prefixArr[start] : prefixArr[end] - prefixArr[start - 1];
+                currSum = i == 0 ? prefixArr[end] : prefixArr[end] - prefixArr[start - 1];
             }
             if (largestSubarraySum < currSum) {
                 largestSubarraySum = currSum;
@@ -88,7 +88,7 @@ public class MaxSubarraySum {
     public static void main(String[] args) {
         int arr[] = { 1, 2, 3, 4 };
         maxsubarraySum(arr);
-        // maxsubarraySum2(arr);
-        // kadanes(arr);
+        maxsubarraySum2(arr);
+        kadanes(arr);
     }
 }
