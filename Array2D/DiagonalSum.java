@@ -8,10 +8,14 @@ public class DiagonalSum {
         // optimize approach
         for(int i = 0; i < arr.length; i++){
             //primary diagonal
-            sum += arr[i][i];
+            // sum += arr[i][i];
             
             //second diagonal
-            if(i + (arr.length - 1 - i) == arr.length - 1){
+            // if(i + (arr.length - 1 - i) == arr.length - 1){
+            //     sum += arr[i][arr.length - 1 - i];
+            // }
+
+            if(i != arr.length - 1 -i){
                 sum += arr[i][arr.length - 1 - i];
             }
         }
