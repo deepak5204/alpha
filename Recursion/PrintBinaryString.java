@@ -1,3 +1,6 @@
+//Print all binary string of size n without consecutive 1
+
+
 package Recursion;
 
 public class PrintBinaryString {
@@ -24,7 +27,8 @@ public class PrintBinaryString {
 
     }
     public static void main(String[] args){
-        binaryString(4, 0, "");
+        int n = 4;
+        binaryString(n, 0, "");
 
     }
 }
