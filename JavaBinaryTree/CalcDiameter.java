@@ -1,3 +1,18 @@
+//calculate diameter of a tree
+// diameter mean maximum length between two nodes
+
+/*
+            1
+          /   \
+         2     3
+        / \    / \
+       4   5  6   7
+          /        \
+         8          9
+ */
+
+// diameter of above tree = 7 (between Node 8 and Node 9)
+
 package JavaBinaryTree;
 
 public class CalcDiameter {
