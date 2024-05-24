@@ -6,11 +6,18 @@ public class SubstringFunction {
             System.out.print(str.charAt(i));
         }
     }
+
+    public static void printSubstring2(String str){
+        for(int i = 0; i < str.length(); i++){
+            System.out.println(str.substring(i));
+        }
+    }
     public static void main(String[] args){
-        String str = "Hello World";
+        String str = "Hello";
         // printSubstring(str, 0, 5);
 
         //here last index are not included
-        System.out.println(str.substring(0,5));
+        // System.out.println(str.substring(0,5));
+        printSubstring2(str);
     }
 }
