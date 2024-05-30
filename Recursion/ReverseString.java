@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class ReverseString {
 
-    public static void printRevString(String str){
+    public static void printRevString(String str){      //O(N)
         if(str.length() == 0){
             return;
         }
