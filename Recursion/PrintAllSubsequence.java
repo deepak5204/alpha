@@ -4,6 +4,8 @@ import java.util.*;
 
 public class PrintAllSubsequence{
 
+
+    //O(2^3 * )
     public static void printSubsequence(String str, int i, StringBuilder newStr){
         if(i == str.length()){
             System.out.println(newStr);
@@ -28,4 +30,3 @@ public class PrintAllSubsequence{
 
         printSubsequence(str, 0, new StringBuilder());
     }
-}
