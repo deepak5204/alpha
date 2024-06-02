@@ -2,6 +2,8 @@ package Recursion;
 
 public class CountPossiblePathInMaze {
 
+    // Rule you can only move in two direction right and down
+
     public static int possiblePath(int i, int j, int n, int m){
         if(i == n || j == m){
             return 0;
