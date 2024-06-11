@@ -1,3 +1,27 @@
+/*
+    For a linked list of the form: L(1) -> L(2) -> L(3) -> L(4) ....... L(n-1) -> L(n)
+    convert it into a zigzag form i.e. : L(1) -> L(n) -> L(2) -> L(n-2) -> L(3) -> L(n-3) ........
+ */
+
+
+ /*
+  * //  Approach
+    1.  find mid node (1st half last node) - using slow fast pointer
+    2.  reverse second half (separate left and right)
+    3.  Alternate merging
+        Node lh = 1st half head
+        Node rh = 2nd half head
+        Node nextL, nextR
+        while(lh != null && rh != null){
+            nextL = lh.next;
+            nextR = rh.next;
+            lh.next = rh;
+            rh.next = nextL;
+            lh = nextL;
+            rh = nextR;
+        }
+  */
+
 package JavaLinkedList;
 
 public class ZigZagLL {
