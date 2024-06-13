@@ -1,3 +1,13 @@
+/*
+ * We have a linked list and two keys in it, swap nodes for two given keys.
+ * Nodes should be swapped by changing links. Swapping data of nodes may be expensive in many situationss when data contains many fields.
+ * It may be assumed that all keys in the linked list are distinct.
+ * 
+ * Sample Input: 1->2->3->4->5, k1 = 2, k2 = 4
+ * sampel output: 1->4->3->2->5
+ */
+
+
 package JavaLinkedList;
 
 public class SwappingNodesInLL {
