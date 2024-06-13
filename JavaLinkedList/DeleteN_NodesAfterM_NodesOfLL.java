@@ -1,3 +1,11 @@
+/*
+ *  We have a linked list and two intergers M and N. Traverse the linked list such that you retain M nodes then delete next N nodes, continue the same till end of the linked list. Difficulty Lever: Rookie
+ * Sample Input: M = 2, N = 2 LL: 1->2->3->4->5->6->7->8
+ * sample output: 1->2->5->6
+ */
+
+
+
 package JavaLinkedList;
 
 public class DeleteN_NodesAfterM_NodesOfLL {
