@@ -1,3 +1,11 @@
+/*
+ * Stock span problem:
+ * span:- maximum number of consecutive days for which price <= today's price
+ * 
+ * span of o'th day = 1 
+ */
+
+
 package JavaStack;
 import java.util.Stack;
 
