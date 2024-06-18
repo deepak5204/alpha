@@ -1,3 +1,13 @@
+/*
+ * Next Greater Element
+ * The next greater element of some element x in an array is the first greater element 
+ * that is to the right of x in the same array.
+ * 
+ * Sample Input: arr[6, 8, 0, 1, 3]
+ * sample Output: next greater = [8, -1, 1, 3, -1]
+ */
+
+
 package JavaStack;
 import java.util.Stack;
 
