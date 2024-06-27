@@ -29,9 +29,8 @@ package JavaQueue;
 
 import java.util.*;
 
-import JavaQueue.JobSequencingProblem.Job;
-
 public class JobSequencingProblem {
+
     static class Job{
         char job_id;
         int deadline;
@@ -44,7 +43,7 @@ public class JobSequencingProblem {
         }
     }
 
-    static void printJobScheduling(ArrayList<Job> arr){
+    public static void printJobScheduling(ArrayList<Job> arr){
         int n = arr.size();
 
         // sorts the list of jobs in ascending order based on their deadlines, ensuring that jobs with earlier deadlines appear first in the list.
@@ -79,6 +78,7 @@ public class JobSequencingProblem {
         }
         System.out.println();
     }
+
     public static void main(String[] args){
         ArrayList<Job> arr = new ArrayList<>();
         arr.add(new Job('a', 4, 20));
