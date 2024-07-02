@@ -1,3 +1,13 @@
+/*
+ Given two arrays A and B of equal length n. Pair each element of array A  to an element in array B, such that sum S of absolute differences of all the pairs is minimum.
+ 
+ Sample input : A = [1, 2, 3]
+                B = [2, 1, 3]
+
+Sample output: 0
+ */
+
+
 package GreedyAlgorithm;
 import java.util.*;
 
